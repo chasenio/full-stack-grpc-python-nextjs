@@ -1,6 +1,5 @@
 ROOT_DIR = $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-MIRROR=https://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com
 PROTOBUF=proto
 PROTOVALIDATE_REPO=https://github.com/bufbuild/protovalidate.git
 PROTOVALIDATE_PATH=proto/protovalidate
@@ -8,7 +7,9 @@ PB2_ROOT=${ROOT_DIR}/src/rpc/pb2
 
 .PHONY: Install Requirements
 install:
-	pip install -r requirements.txt -i ${MIRROR}
+	# if you are in China, you can use the following mirror to speed up the installation
+	#pip install -r requirements-tests.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+	pip install -r requirements-tests.txt
 
 #
 # 在 Python 中 proto 生成不会自动修正生成的 module import, 需要手动修正
@@ -23,7 +24,9 @@ pb2:
 .PHONY: Build Buf Generate
 buf:
 	cd ${PROTOBUF} && buf dep update
+	make protovalidate
 	buf generate
+	make pb2
 	@echo "Done building Buf."
 
 #

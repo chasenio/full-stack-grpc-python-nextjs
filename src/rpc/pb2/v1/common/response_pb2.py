@@ -25,16 +25,16 @@ _sym_db = _symbol_database.Default()
 from ...buf.validate import validate_pb2 as buf_dot_validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18v1/common/response.proto\x12\tv1.common\x1a\x1b\x62uf/validate/validate.proto\"\x87\x01\n\rErrorResponse\x12\x18\n\x07message\x18\x01 \x01(\tR\x07message\x12\x37\n\nviolations\x18\x02 \x03(\x0b\x32\x17.buf.validate.ViolationR\nviolations\x12#\n\x04\x63ode\x18\x03 \x01(\x0e\x32\x0f.v1.common.CodeR\x04\x63ode*5\n\x04\x43ode\x12\x10\n\x0c\x43ODE_INVALID\x10\x00\x12\x0b\n\x07\x43ODE_OK\x10\x01\x12\x0e\n\nCODE_ERROR\x10\x14\x42\x63\n\rcom.v1.commonB\rResponseProtoP\x01\xa2\x02\x03VCX\xaa\x02\tV1.Common\xca\x02\tV1\\Common\xe2\x02\x15V1\\Common\\GPBMetadata\xea\x02\nV1::Commonb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18v1/common/response.proto\x12\x0fproto.v1.common\x1a\x1b\x62uf/validate/validate.proto\"\x8d\x01\n\rErrorResponse\x12\x18\n\x07message\x18\x01 \x01(\tR\x07message\x12\x37\n\nviolations\x18\x02 \x03(\x0b\x32\x17.buf.validate.ViolationR\nviolations\x12)\n\x04\x63ode\x18\x03 \x01(\x0e\x32\x15.proto.v1.common.CodeR\x04\x63ode*5\n\x04\x43ode\x12\x10\n\x0c\x43ODE_INVALID\x10\x00\x12\x0b\n\x07\x43ODE_OK\x10\x01\x12\x0e\n\nCODE_ERROR\x10\x14\x42\x82\x01\n\x13\x63om.proto.v1.commonB\rResponseProtoP\x01\xa2\x02\x03PVC\xaa\x02\x0fProto.V1.Common\xca\x02\x0fProto\\V1\\Common\xe2\x02\x1bProto\\V1\\Common\\GPBMetadata\xea\x02\x11Proto::V1::Commonb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'v1.common.response_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'\n\rcom.v1.commonB\rResponseProtoP\001\242\002\003VCX\252\002\tV1.Common\312\002\tV1\\Common\342\002\025V1\\Common\\GPBMetadata\352\002\nV1::Common'
-  _globals['_CODE']._serialized_start=206
-  _globals['_CODE']._serialized_end=259
-  _globals['_ERRORRESPONSE']._serialized_start=69
-  _globals['_ERRORRESPONSE']._serialized_end=204
+  _globals['DESCRIPTOR']._serialized_options = b'\n\023com.proto.v1.commonB\rResponseProtoP\001\242\002\003PVC\252\002\017Proto.V1.Common\312\002\017Proto\\V1\\Common\342\002\033Proto\\V1\\Common\\GPBMetadata\352\002\021Proto::V1::Common'
+  _globals['_CODE']._serialized_start=218
+  _globals['_CODE']._serialized_end=271
+  _globals['_ERRORRESPONSE']._serialized_start=75
+  _globals['_ERRORRESPONSE']._serialized_end=216
 # @@protoc_insertion_point(module_scope)
