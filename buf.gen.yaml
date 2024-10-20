@@ -8,5 +8,22 @@ plugins:
     out: src/rpc/pb2
   - remote: buf.build/protocolbuffers/python:v28.2
     out: src/rpc/pb2
+
+  # typescript
+  - remote: buf.build/grpc/web:v1.5.0 # gprc_web_pb.js/.d.ts  _pb.d.ts
+    out: ui/src/shared/grpc-web
+    opt:
+      - mode=grpcwebtext
+      - import_style=commonjs+dts
+  - remote: buf.build/protocolbuffers/js:v3.21.2 # _pb.js
+    out: ui/src/shared/grpc-web
+    opt:
+      - import_style=commonjs
+  - remote: buf.build/community/timostamm-protobuf-ts:v2.9.4
+    out: ui/src/shared/grpc-web
+    opt:
+      - generate_dependencies
+      - long_type_string
+
 inputs:
   - directory: proto
