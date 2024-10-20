@@ -1,0 +1,25 @@
+syntax = 'proto3';
+
+package v1.common;
+
+import "buf/validate/validate.proto";
+
+
+// 状态码
+enum Code {
+  // 无效状态码
+  CODE_INVALID = 0;
+  // 成功
+  CODE_OK = 1;
+  // 未知错误
+  CODE_ERROR = 20;
+}
+
+message ErrorResponse {
+  // 状态消息
+  string message = 1;
+  // `violations` is a repeated field that contains all the `Violation` messages corresponding to the violations detected.
+  repeated buf.validate.Violation violations = 2;
+  // 状态码
+  Code code = 3;
+}

@@ -1,0 +1,13 @@
+version: v1
+
+#deps:
+#  - buf.build/bufbuild/protovalidate
+#build:
+#  excludes:
+#    - buf # Exclude the buf package, 因为这是为里让 IDE 识别而创建的
+lint:
+  use:
+    - STANDARD
+breaking:
+  use:
+    - FILE
