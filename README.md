@@ -9,9 +9,9 @@ Using gRPC-web as the communication method between front-end and back-end, this 
 > grpc-web is a client side library. XHLHttpRequest is not supported by Next.js server side rendering.
 
 ```               
-    ┌──────────────┐     ┌────────────────┐     ┌───────────────┐  
-    │   Browser    ├────►│   gRPC Proxy   ├────►│  gRPC Server  │  
-    └──────────────┘     └────────────────┘     └───────────────┘                                                            
+    ┌──────────────┐     ┌────────────────┐     ┌───────────────┐
+    │   Browser    ├────►│   gRPC Proxy   ├────►│  gRPC Server  │
+    └──────────────┘     └────────────────┘     └───────────────┘
 ```
 
 **2. Server Side Solution**
@@ -19,9 +19,9 @@ Using gRPC-web as the communication method between front-end and back-end, this 
 If you want to use Server Side Rendering, you need to make gRPC requests directly from the Next.js server to the RPC server. 
 
 ```                                                    
-    ┌──────────────┐     ┌────────────────┐     ┌───────────────┐   
-    │   Browser    ├────►│ Next.js Server ├────►│  gRPC Server  │   
-    └──────────────┘     └────────────────┘     └───────────────┘                                                                 
+    ┌──────────────┐     ┌────────────────┐     ┌───────────────┐
+    │   Browser    ├────►│ Next.js Server ├────►│  gRPC Server  │
+    └──────────────┘     └────────────────┘     └───────────────┘
 ```
 
 The two approaches above can be used in combination, depending on the actual situation.
